@@ -1,0 +1,26 @@
+avg_decision_latency_ms,p95_decision_latency_ms,max_decision_latency_ms,TPS_avg,TPS_peak,infra_capacity_TPS,false_positive_rate_percent,percent_genuine_users_problem_percent,percent_falsepos_successfully_reversed_literal_percent,percent_falsepos_successfully_reversed_sensible_percent,disparate_impact_ratio,fp_fn_distribution_across_groups,model_drift_index_proxy,accuracy_decay_rate_percent,retraining_frequency_note,total_money_saved_USD,fraud_prevented_count,infrastructure_cost_month_note,net_roi_if_cost_provided_USD,prompt_infra_estimate,prompt_auto_routable,prompt_opportunity_cost,pct_low_confidence,pct_high_risk_users,avg_queue_length_note,prompt_stress_test,total_txns,total_frauds,total_normals,total_block_actions,total_manual_actions,block_notfraud_count,manual_notfraud_count,block_and_fraud_count,manual_and_fraud_count
+,,,4.380250177272008,24,,89.05344266930581,0.3964964787430204,99.99999783672166,87.91490790483499,N/A (no protected demographic features present in dataset),Assumed equal (no demographic groups in dataset).,0.021712542862264664,-129.40500390029416,Requires training logs; placeholder not calculated.,11675593548.779999,6391,NOT_CALCULATED - use prompt below to estimate.,use compute_net_roi(infra_cost_usd) with infra_cost_usd,"Estimate monthly infrastructure & operational cost for running fraud detection model.
+Inputs (please provide realistic values):
+- number_transactions_per_month (int)
+- average_model_latency_ms and average CPU cores used per inference
+- memory per node (GB) and number of nodes
+- cost per compute-core-hour (USD)
+- cost per GB-hour of RAM (USD)
+- storage costs (monthly, USD)
+- SRE/ops overhead (monthly, USD)
+
+Return: estimated total monthly cost (USD) and a short breakdown.
+","Estimate % of transactions that could be automatically routed for other business actions.
+Inputs:
+- monthly transaction volume
+- business rules for auto-routing (confidence threshold, acceptable risk)
+- typical % of transactions with probability > threshold
+
+Return: estimated percent and recommended thresholds.","Estimate opportunity cost avoided by predictive insights (monthly).
+Inputs:
+- monthly number of fraud incidents historically and average loss per incident (USD)
+- model detection uplift compared to baseline (e.g., 20% fewer frauds)
+- cost to implement other countermeasures
+
+Return: estimated monthly opportunity cost avoided (USD).",96.62291634578209,0.17696295803114817,requires infra telemetry; placeholder.,"To perform stress tests simulate: (1) 5x fraud spike for 1 hour; (2) 10x overall TPS for 10 minutes.
+Measure detection rate and latency; return detection rate (%) and p95 latency under stress.",6362620,8213,6354407,28292,186579,25195,183285,3097,3294
