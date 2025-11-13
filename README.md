@@ -74,16 +74,6 @@ sub-5ms average inference on 6.3M transactions/month ensures smooth integration 
 <p align="center">
   <img src="./plots/probabilities_cdf.png" width="650" alt="FPR vs Recall Curve">
 </p>
-
-#### 🔹 *Money saved every day*
-<p align="center">
-  <img src="./plots/fraud_saved_amount_daily.png" width="650" alt="FPR vs Recall Curve">
-</p>
-
-#### 🔹 *Model score distribution by day*
-<p align="center">
-  <img src="./plots/fraud_saved_amount_daily.png" width="650" alt="Model score distribution by day">
-</p>
 ---
 
 ## **Section 2 – Technical Journey & Model Story**
